@@ -63,7 +63,7 @@ class App {
     const schema = await buildSchema({
       resolvers: resolvers,
       authChecker: authChecker,
-    });
+    } as any);
 
     const apolloServer = new ApolloServer({
       schema: schema,
@@ -93,7 +93,7 @@ class App {
     });
 
     await apolloServer.start();
-    apolloServer.applyMiddleware({ app: this.app, cors: ORIGIN, path: '/graphql' });
+    apolloServer.applyMiddleware({ app: this.app, cors: ORIGIN, path: '/graphql' } as any);
   }
 
   private initializeErrorHandling() {
