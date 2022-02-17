@@ -15,5 +15,4 @@ export class createTest1645103088383 implements MigrationInterface {
       DROP TABLE "test";
     `);
   }
-
 }

@@ -12,5 +12,4 @@ export class setupUuid1645098921744 implements MigrationInterface {
       DROP EXTENSION IF EXISTS "uuid-ossp";
     `);
   }
-
 }
